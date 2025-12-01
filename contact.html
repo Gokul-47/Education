@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        .social-grid a{
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <!-- Logo -->
+            <a href="./index.html" class="logo">
+                <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                <span class="logo-text">Stackly</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle">Home ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./home2.html">Home 2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Courses</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+
+                <li><a href="./login.html" class="nav-btn">Login</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Our Academic Team</h1>
+            <p>Get in touch for admissions, courses, or general academic support</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Main Campus</h3>
+                    <p>Stackly Academy</p>
+                    <p>Karnataka</p>
+                    <p>Bengaluru</p>
+                </div>
+                <div class="info-card">
+                    <h3>Support Lines</h3>
+                    <p>Admissions: +91 98765 43210</p>
+                    <p>Email: admissions@stacklyacademy.com</p>
+                    <p>Helpdesk: support@stacklyacademy.com</p>
+                </div>
+                <div class="info-card">
+                    <h3>Working Hours</h3>
+                    <p>Monday - Saturday</p>
+                    <p>9:00 AM - 7:00 PM IST</p>
+                    <p>Sunday: Holiday</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Reach Out to Us</h2>
+                    <p>We respond to all academic queries within 24 hours</p>
+                </div>
+
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="you@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Institution / School</label>
+                            <input type="text" id="company" placeholder="Your Institution Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Topic of Inquiry *</label>
+                        <select id="service" required>
+                            <option value="">Select an option</option>
+                            <option>Course Enrollment</option>
+                            <option>Scholarships</option>
+                            <option>Teacher Training</option>
+                            <option>Online Classes</option>
+                            <option>Study Materials</option>
+                            <option>General Questions</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Class Level</label>
+                        <select id="budget">
+                            <option value="">Select</option>
+                            <option>Primary School</option>
+                            <option>High School</option>
+                            <option>Higher Secondary</option>
+                            <option>Competitive Exams</option>
+                            <option>College Level</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" rows="6" required placeholder="Tell us your query..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Campus Location</h2>
+
+            <div class="map-container">
+                <iframe width="100%" height="350" style="border:0; border-radius:10px;"
+                    loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0942023807566!2d77.5920337742049!3d12.998635387329305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167f20fbbd8f%3A0xaea0a43d0b2de2ac!2sBangalore%20Palace!5e0!3m2!1sen!2sin!4v1708740297924">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Contact Methods -->
+    <section class="alt-contact">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Connect</h2>
+            <div class="alt-methods">
+
+                <div class="method-card">
+                    <h3>Live Academic Chat</h3>
+                    <p>Instant responses from our support team</p>
+                    <button class="btn btn-secondary" onclick="window.location.href='404.html'">Start Chat</button>
+                </div>
+
+                <div class="method-card">
+                    <h3>Book a Counseling Call</h3>
+                    <p>Talk with our education experts</p>
+                    <button class="btn btn-secondary" onclick="window.location.href='404.html'">Schedule Call</button>
+                </div>
+
+                <div class="method-card">
+                    <h3>WhatsApp Support</h3>
+                    <p>Quick replies for urgent academic doubts</p>
+                    <button class="btn btn-secondary" onclick="window.location.href='404.html'">Message Us</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How soon will I receive a response?</h3>
+                    <p>Usually within 24 hours on working days.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you provide free demo classes?</h3>
+                    <p>Yes, most courses offer a free trial class.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I speak to a faculty member?</h3>
+                    <p>Yes, you can schedule a one-on-one call.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is guidance available for competitive exams?</h3>
+                    <p>Absolutely! We have expert mentors for JEE, NEET, UPSC & more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="office-locations">
+        <div class="container">
+            <h2 class="section-title">Our Learning Centers</h2>
+
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h3>Bengaluru</h3>
+                    <p>Main Academic Hub</p>
+                    <p>MG Road Campus</p>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div class="office-card">
+                    <h3>Mumbai</h3>
+                    <p>Western Region Center</p>
+                    <p>Andheri East</p>
+                    <p>+91 91234 56789</p>
+                </div>
+                <div class="office-card">
+                    <h3>Delhi</h3>
+                    <p>Northern Regional Center</p>
+                    <p>Connaught Place</p>
+                    <p>+91 99887 66554</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Options -->
+    <section class="support-center">
+        <div class="container">
+            <h2 class="section-title">Student Support</h2>
+
+            <div class="offices-grid">
+                <div class="office-card">
+                    <h3>Technical Support</h3>
+                    <p>For online class issues</p>
+                    <p>Email: tech@stacklyacademy.com</p>
+                </div>
+                <div class="office-card">
+                    <h3>Admissions Desk</h3>
+                    <p>For new enrollments</p>
+                    <p>Email: admissions@stacklyacademy.com</p>
+                </div>
+                <div class="office-card">
+                    <h3>General Help</h3>
+                    <p>For course-related questions</p>
+                    <p>Email: support@stacklyacademy.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="social-media">
+        <div class="container">
+            <h2 class="section-title">Stay Connected</h2>
+            <p class="section-subtitle">Follow us for academic updates and student stories</p>
+
+            <div class="social-grid">
+                <a href="./404.html" class="social-card">
+                    <h3>Facebook</h3>
+                    <p>Daily study tips</p>
+                </a>
+                <a href="./404.html" class="social-card">
+                    <h3>Twitter</h3>
+                    <p>Education news and announcements</p>
+                </a>
+                <a href="./404.html" class="social-card">
+                    <h3>LinkedIn</h3>
+                    <p>Career updates and placements</p>
+                </a>
+                <a href="./404.html" class="social-card">
+                    <h3>Instagram</h3>
+                    <p>Campus life & student success</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="contact-testimonial">
+        <div class="container">
+            <blockquote>
+                <p>"Stackly Academy helped my child build strong fundamentals. The teachers are extremely supportive and experienced."</p>
+                <footer>- Priya Menon, Parent</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="emergency-contact">
+        <div class="container">
+            <h2 class="section-title">Emergency Academic Support</h2>
+            <p>24/7 support for online class interruptions or urgent issues</p>
+            <p class="emergency-number">+91 98765 43210</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px;">
+                        <span class="logo-text">Stackly Academy</span>
+                    </div>
+                    <p class="footer-desc">Delivering quality education for every learner</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Courses</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stacklyacademy.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: MG Road, Bengaluru, Karnataka</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly Academy. All rights reserved.</p>
+            </div>
+            <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="location-info">📍 Indiranagar, Bangalore, Karnataka 560038, India</p>
+        </div>
+    </div>
+        </div>
+        
+
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

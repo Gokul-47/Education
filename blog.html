@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./home2.html">Home 2</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Courses</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Courses & Classes Blog</h1>
+            <p>Insights on online classes, course strategies, subject guidance, and exam preparation</p>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-content">
+                <span class="post-tag">Featured</span>
+                <h2>Why Online Classes Are Becoming the Future of Learning in 2025</h2>
+                <p class="post-excerpt">Understand how structured online programs, live interactive classes, and AI-based assessments are reshaping student study habits.</p>
+                <div class="post-meta">
+                    <span>By Ananya Rao</span>
+                    <span>•</span>
+                    <span>January 15, 2025</span>
+                    <span>•</span>
+                    <span>8 min read</span>
+                </div>
+                <a href="404.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <h2 class="section-title">Categories</h2>
+            <div class="categories-grid">
+                <button class="category-btn active" onclick="filterBlog('all')">All Posts</button>
+                <button class="category-btn" onclick="filterBlog('development')">Online Classes</button>
+                <button class="category-btn" onclick="filterBlog('design')">Courses</button>
+                <button class="category-btn" onclick="filterBlog('marketing')">Exams & Tests</button>
+                <button class="category-btn" onclick="filterBlog('technology')">Learning Technology</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- 1 -->
+                <article class="blog-card" data-category="development">
+                    <img src="assets/online class_6_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Online Classes</span>
+                        <h3>How Live Online Classes Improve Student Performance</h3>
+                        <p>Explore the advantages of structured live sessions, doubt-solving hours, and interactive boards.</p>
+                        <div class="post-meta">
+                            <span>Meera Chand</span>
+                            <span>•</span>
+                            <span>Jan 12, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2 -->
+                <article class="blog-card" data-category="design">
+                    <img src="assets/CRASH-COURSE-copy_3_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Courses</span>
+                        <h3>Choosing the Right Course: A Complete Student Guide</h3>
+                        <p>Which course fits you? A breakdown of subject pathways, specialization routes, and career outcomes.</p>
+                        <div class="post-meta">
+                            <span>Arjun Kumar</span>
+                            <span>•</span>
+                            <span>Jan 9, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3 -->
+                <article class="blog-card" data-category="marketing">
+                    <img src="assets/exams_5_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Exams & Tests</span>
+                        <h3>How to Prepare for Competitive Exams with Online Courses</h3>
+                        <p>Discover structured classes that help students crack IIT-JEE, NEET, UPSC, and more.</p>
+                        <div class="post-meta">
+                            <span>Aditi Sharma</span>
+                            <span>•</span>
+                            <span>Jan 5, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4 -->
+                <article class="blog-card" data-category="technology">
+                    <img src="assets/ai_2_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Learning Technology</span>
+                        <h3>How AI Is Revolutionizing Online Courses</h3>
+                        <p>Adaptive learning, instant grading, personalized study plans—AI is the new classroom assistant.</p>
+                        <div class="post-meta">
+                            <span>Rohan Das</span>
+                            <span>•</span>
+                            <span>Jan 3, 2025</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5 -->
+                <article class="blog-card" data-category="development">
+                    <img src="assets/DeWatermark.ai_1737444541845_4_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Online Classes</span>
+                        <h3>Why Students Learn Faster in Small-Group Online Classes</h3>
+                        <p>Small-cohort classes help students stay focused, ask more questions, and learn deeply.</p>
+                        <div class="post-meta">
+                            <span>Meera Chand</span>
+                            <span>•</span>
+                            <span>Dec 29, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6 -->
+                <article class="blog-card" data-category="design">
+                    <img src="assets/exams_5_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Courses</span>
+                        <h3>Best Foundation Courses for Class 6–10 Students</h3>
+                        <p>A complete guide to science, maths, language, and logical reasoning foundation programs.</p>
+                        <div class="post-meta">
+                            <span>Arjun Kumar</span>
+                            <span>•</span>
+                            <span>Dec 26, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7 -->
+                <article class="blog-card" data-category="marketing">
+                    <img src="assets/recclass.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Exams & Tests</span>
+                        <h3>Crash Courses vs Long-Term Courses: What Should You Choose?</h3>
+                        <p>Understand duration, difficulty, and outcomes before selecting an exam preparation style.</p>
+                        <div class="post-meta">
+                            <span>Aditi Sharma</span>
+                            <span>•</span>
+                            <span>Dec 21, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8 -->
+                <article class="blog-card" data-category="technology">
+                    <img src="assets/online class_6_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Learning Technology</span>
+                        <h3>Smart Classrooms: The Future of Digital Learning</h3>
+                        <p>Virtual labs, digital boards, and AR simulations are redefining modern education.</p>
+                        <div class="post-meta">
+                            <span>Rohan Das</span>
+                            <span>•</span>
+                            <span>Dec 20, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9 -->
+                <article class="blog-card" data-category="development">
+                    <img src="assets/CRASH-COURSE-copy_3_11zon.webp" class="blog-image">
+                    <div class="blog-content">
+                        <span class="category-label">Online Classes</span>
+                        <h3>How Recorded Classes Help Students Revise Better</h3>
+                        <p>Rewatch important concepts and strengthen your understanding through chapter-wise recorded lectures.</p>
+                        <div class="post-meta">
+                            <span>Meera Chand</span>
+                            <span>•</span>
+                            <span>Dec 18, 2024</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="blog-newsletter">
+        <div class="container">
+            <h2>Subscribe for Course Updates</h2>
+            <p>Get class announcements, course launches, and study resources weekly.</p>
+            <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Popular Tags -->
+    <section class="popular-tags">
+        <div class="container">
+            <h2 class="section-title">Popular Course Topics</h2>
+            <div class="tags-cloud">
+                <span class="tag">Math Classes</span>
+                <span class="tag">Science Courses</span>
+                <span class="tag">IIT-JEE</span>
+                <span class="tag">NEET</span>
+                <span class="tag">Spoken English</span>
+                <span class="tag">Coding for Kids</span>
+                <span class="tag">AI Courses</span>
+                <span class="tag">Mock Tests</span>
+                <span class="tag">Crash Courses</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Comments -->
+    <section class="recent-comments">
+        <div class="container">
+            <h2 class="section-title">Student Feedback</h2>
+            <div class="comments-list">
+                <div class="comment-item">
+                    <p class="comment-text">"The Math Mastery course completely changed how I study!"</p>
+                    <p class="comment-author">- Aryan on Math Course</p>
+                </div>
+                <div class="comment-item">
+                    <p class="comment-text">"The JEE crash course helped me finish revision in just 40 days."</p>
+                    <p class="comment-author">- Sneha on JEE Crash Course</p>
+                </div>
+                <div class="comment-item">
+                    <p class="comment-text">"Online classes are surprisingly engaging and well structured."</p>
+                    <p class="comment-author">- Vinay on Online Class Review</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive -->
+    <section class="blog-archive">
+        <div class="container">
+            <h2 class="section-title">Archive</h2>
+            <div class="archive-grid">
+                <div class="archive-item"><h4>January 2025</h4><p>4 posts</p></div>
+                <div class="archive-item"><h4>December 2024</h4><p>7 posts</p></div>
+                <div class="archive-item"><h4>November 2024</h4><p>6 posts</p></div>
+                <div class="archive-item"><h4>October 2024</h4><p>5 posts</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authors Section -->
+    <section class="blog-authors">
+        <div class="container">
+            <h2 class="section-title">Our Course Instructors</h2>
+            <div class="authors-grid">
+                <div class="author-card">
+                    <div class="author-photo1"></div>
+                    <h3>Dr. Ananya Rao</h3>
+                    <p>Online Learning Specialist</p>
+                </div>
+                <div class="author-card">
+                    <div class="author-photo2"></div>
+                    <h3>Arjun Kumar</h3>
+                    <p>Course Curriculum Designer</p>
+                </div>
+                <div class="author-card">
+                    <div class="author-photo3"></div>
+                    <h3>Aditi Sharma</h3>
+                    <p>Exam Preparation Mentor</p>
+                </div>
+                <div class="author-card">
+                    <div class="author-photo4"></div>
+                    <h3>Rohan Das</h3>
+                    <p>EdTech Systems Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="blog-resources">
+        <div class="container">
+            <h2 class="section-title">Course Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Free Demo Class</h3>
+                    <p>Try any course with a live instructor session.</p>
+                    <a href="404.html" class="resource-link">Book Now</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Course Brochure</h3>
+                    <p>Complete details of all programs for Classes 6–12.</p>
+                    <a href="404.html" class="resource-link">Download</a>
+                </div>
+                <div class="resource-card">
+                    <h3>Sample Lectures</h3>
+                    <p>Watch free chapter-wise videos from top instructors.</p>
+                    <a href="404.html" class="resource-link">Watch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                        <span class="logo-text">Stackly</span>
+                    </div>
+                    <p class="footer-desc">Empowering learners with world-class online classes and structured courses.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Services</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stackly.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: 123 Learning Hub, Bengaluru, Karnataka</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly. All rights reserved.</p>
+            </div>
+            <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="location-info">📍 Indiranagar, Bangalore, Karnataka 560038, India</p>
+        </div>
+    </div>
+        </div>
+
+       
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

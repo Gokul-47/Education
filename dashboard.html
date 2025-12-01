@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+    <style>
+        .dashboard-section { padding: 40px; }
+        .dashboard-title { font-size: 28px; margin-bottom: 20px; }
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .analytics-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            height: 180px;
+            gap: 10px;
+        }
+        .bar {
+            width: 15%;
+            background: #2563eb;
+            border-radius: 6px 6px 0 0;
+            position: relative;
+        }
+        .bar::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 12px;
+        }
+        .project-list { list-style: none; padding: 0; }
+        .project-list li { padding: 5px 0; font-size: 16px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
+        .green { background: #4caf50; }
+        .yellow { background: #ff9800; }
+        .red { background: #f44336; }
+        .blue { background: #2196f3; }
+        .progress { width: 100%; height: 10px; background: #ddd; border-radius: 10px; }
+        .progress-fill { height: 100%; background: #4caf50; border-radius: 10px; }
+        .rating-box { text-align: center; }
+        .rating-box h2 { font-size: 32px; margin: 0; }
+    </style>
+</head>
+
+<body class="dashboard-body">
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" style="width:40px;height:40px;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./home2.html">Home 2</a></li>
+                </ul>
+            </li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Courses</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Layout -->
+<div class="dashboard-layout">
+
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#overview" class="active" onclick="showSection('overview')">Overview</a></li>
+            <li><a href="#projects" onclick="showSection('projects')">Courses</a></li>
+            <li><a href="#analytics" onclick="showSection('analytics')">Analytics</a></li>
+            <li><a href="#tasks" onclick="showSection('tasks')">Assignments</a></li>
+            <li><a href="#team" onclick="showSection('team')">Teachers</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+
+        <!-- Overview -->
+        <section id="overview" class="dashboard-section active">
+            <h1 class="dashboard-title">Student Performance Overview</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Active Courses</h3>
+                    <p class="stat-number">8</p>
+                    <span class="stat-change positive">+2 new courses</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Study Hours</h3>
+                    <p class="stat-number">463 hrs</p>
+                    <span class="stat-change positive">+12% this month</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Assignments Completed</h3>
+                    <p class="stat-number">124</p>
+                    <span class="stat-change">On Track</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Assignments</h3>
+                    <p class="stat-number">5</p>
+                    <span class="stat-change negative">Due Soon</span>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Recent Learning Activity</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">✓</span>
+                        <div class="activity-content">
+                            <p><strong>Completed Lesson:</strong> Algebra – Quadratic Equations</p>
+                            <span class="activity-time">1 hour ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">★</span>
+                        <div class="activity-content">
+                            <p><strong>New Course Enrolled:</strong> Physics – Electromagnetism</p>
+                            <span class="activity-time">3 hours ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">→</span>
+                        <div class="activity-content">
+                            <p><strong>Progress Updated:</strong> Chemistry course now 60% complete</p>
+                            <span class="activity-time">1 day ago</span>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">📘</span>
+                        <div class="activity-content">
+                            <p><strong>New Study Material Added:</strong> Biology – Human Anatomy Notes</p>
+                            <span class="activity-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>Quick Actions</h2>
+                <div class="quick-actions">
+                    <button class="action-btn">Join Live Class</button>
+                    <button class="action-btn">Download Notes</button>
+                    <button class="action-btn">View Timetable</button>
+                    <button class="action-btn">Attempt Quiz</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses -->
+        <section id="projects" class="dashboard-section">
+            <h1 class="dashboard-title">Courses</h1>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Mathematics – Algebra</h3>
+                        <span class="project-status active">Ongoing</span>
+                    </div>
+                    <p>Master algebraic concepts with interactive lessons and quizzes.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 72%"></div></div>
+                        <span>72% Completed</span>
+                    </div>
+                    <div class="project-meta">
+                        <span>Teacher: Mr. Sharma</span>
+                        <span>Lessons: 24</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Physics – Mechanics</h3>
+                        <span class="project-status active">Ongoing</span>
+                    </div>
+                    <p>Understand motion, forces, and Newton’s laws.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 48%"></div></div>
+                        <span>48% Completed</span>
+                    </div>
+                    <div class="project-meta">
+                        <span>Teacher: Dr. Ramesh</span>
+                        <span>Lessons: 30</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Chemistry – Organic</h3>
+                        <span class="project-status planning">Upcoming</span>
+                    </div>
+                    <p>Explore carbon compounds and reactions.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 10%"></div></div>
+                        <span>Starting Soon</span>
+                    </div>
+                    <div class="project-meta">
+                        <span>Teacher: Dr. Patel</span>
+                        <span>Lessons: 18</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Biology – Human Anatomy</h3>
+                        <span class="project-status completed">Completed</span>
+                    </div>
+                    <p>Learn body systems and functions.</p>
+                    <div class="project-progress">
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+                        <span>Completed</span>
+                    </div>
+                    <div class="project-meta">
+                        <span>Teacher: Mrs. Priya</span>
+                        <span>Lessons: 20</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analytics -->
+        <section id="analytics" class="dashboard-section">
+            <h1 class="dashboard-title">Learning Analytics</h1>
+
+            <div class="analytics-grid">
+
+                <div class="analytics-card">
+                    <h3>Study Hours (Last 6 Months)</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="height:40%;" data-label="Apr"></div>
+                        <div class="bar" style="height:55%;" data-label="May"></div>
+                        <div class="bar" style="height:62%;" data-label="Jun"></div>
+                        <div class="bar" style="height:74%;" data-label="Jul"></div>
+                        <div class="bar" style="height:88%;" data-label="Aug"></div>
+                        <div class="bar" style="height:96%;" data-label="Sep"></div>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>Course Completion Status</h3>
+                    <ul class="project-list">
+                        <li><span class="dot green"></span> Completed – 14 Courses</li>
+                        <li><span class="dot yellow"></span> Ongoing – 6 Courses</li>
+                        <li><span class="dot red"></span> Pending – 3 Courses</li>
+                        <li><span class="dot blue"></span> Upcoming – 4 Courses</li>
+                    </ul>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>Subject Performance</h3>
+                    <div class="progress-box">
+                        <p>Mathematics – 91%</p>
+                        <div class="progress"><div class="progress-fill" style="width:91%;"></div></div>
+
+                        <p>Science – 84%</p>
+                        <div class="progress"><div class="progress-fill" style="width:84%;"></div></div>
+
+                        <p>English – 78%</p>
+                        <div class="progress"><div class="progress-fill" style="width:78%;"></div></div>
+                    </div>
+                </div>
+
+                <div class="analytics-card">
+                    <h3>Student Rating</h3>
+                    <div class="rating-box">
+                        <h2>⭐ 4.7 / 5.0</h2>
+                        <p>Based on 310 Feedbacks</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Assignments -->
+        <section id="tasks" class="dashboard-section">
+            <h1 class="dashboard-title">Assignments</h1>
+
+            <div class="tasks-container">
+
+                <div class="task-column">
+                    <h3>To Do</h3>
+                    <div class="task-item">
+                        <h4>Math Worksheet – Algebra</h4>
+                        <p>Complete 15 practice problems</p>
+                        <span class="task-priority high">High Priority</span>
+                    </div>
+                    <div class="task-item">
+                        <h4>English Essay</h4>
+                        <p>Write 500 words on global warming</p>
+                        <span class="task-priority medium">Medium Priority</span>
+                    </div>
+                </div>
+
+                <div class="task-column">
+                    <h3>In Progress</h3>
+                    <div class="task-item">
+                        <h4>Physics Lab Report</h4>
+                        <p>Prepare experiment analysis</p>
+                        <span class="task-priority high">High Priority</span>
+                    </div>
+                    <div class="task-item">
+                        <h4>Chemistry Assignment</h4>
+                        <p>Organic reactions sheet</p>
+                        <span class="task-priority medium">Medium Priority</span>
+                    </div>
+                </div>
+
+                <div class="task-column">
+                    <h3>Completed</h3>
+                    <div class="task-item completed">
+                        <h4>Biology Project</h4>
+                        <p>Completed research submission</p>
+                        <span class="task-priority">Completed</span>
+                    </div>
+                    <div class="task-item completed">
+                        <h4>History Notes</h4>
+                        <p>Finished chapter summaries</p>
+                        <span class="task-priority">Completed</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Teachers -->
+        <section id="team" class="dashboard-section">
+            <h1 class="dashboard-title">Teachers</h1>
+
+            <div class="team-grid">
+
+                <div class="team-card">
+                    <div class="team-avatar1"></div>
+                    <h3>Mr. Sharma</h3>
+                    <p>Mathematics Teacher</p>
+                    <span class="team-status online">Online</span>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar2"></div>
+                    <h3>Dr. Ramesh</h3>
+                    <p>Physics Instructor</p>
+                    <span class="team-status online">Online</span>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar3"></div>
+                    <h3>Mrs. Priya</h3>
+                    <p>Biology Teacher</p>
+                    <span class="team-status away">Away</span>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar4"></div>
+                    <h3>Ms. Sofia</h3>
+                    <p>English Lecturer</p>
+                    <span class="team-status offline">Offline</span>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-avatar5"></div>
+                    <h3>Mr. Arjun</h3>
+                    <p>Chemistry Tutor</p>
+                    <span class="team-status online">Online</span>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <img src="assets/logoimg.webp" style="width:40px;height:40px;">
+                    <span class="logo-text">Stackly</span>
+                </div>
+                <p class="footer-desc">Empowering students through smart learning tools</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li class="dropdown">
+                        <a href="./index.html" class="dropdown-toggle">Home</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./home2.html">Home 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./services.html">Services</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p>Email: support@stackly.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: Bengaluru, Karnataka, India</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="./404.html">Facebook</a>
+                    <a href="./404.html">Twitter</a>
+                    <a href="./404.html">LinkedIn</a>
+                    <a href="./404.html">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Stackly Education. All rights reserved.</p>
+        </div>
+        <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="location-info">📍 Indiranagar, Bangalore, Karnataka 560038, India</p>
+        </div>
+    </div>
+    </div>
+    
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

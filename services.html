@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./home2.html">Home 2</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Courses</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Programs</h1>
+            <p>Comprehensive learning solutions built for students, professionals & lifelong learners.</p>
+        </div>
+    </section>
+
+    <!-- Web Development Service -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">Online Courses</h2>
+            <div class="service-content">
+                <div class="service-text">
+                    <p>Access high-quality video lessons, learning materials, quizzes, and assignments across academic, technical, and competitive fields. Learn anywhere, anytime.</p>
+                    <ul class="service-features">
+                        <li>Interactive Video Lectures</li>
+                        <li>Subject-Wise Study Materials</li>
+                        <li>Live Doubt Solving Sessions</li>
+                        <li>Assignments & Quizzes</li>
+                        <li>Progress Tracking Dashboard</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <div class="visual-box">Self-Paced</div>
+                    <div class="visual-box">Expert Faculty</div>
+                    <div class="visual-box">Track Progress</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Development -->
+    <section class="service-detail alt-bg">
+        <div class="container">
+            <h2 class="section-title">Live Classes</h2>
+            <div class="service-content reverse">
+                <div class="service-visual">
+                    <div class="visual-box">Real-Time</div>
+                    <div class="visual-box">Interactive</div>
+                    <div class="visual-box">Scheduled Batches</div>
+                </div>
+                <div class="service-text">
+                    <p>Join live instructor-led classes designed to replicate the classroom experience online. Engage, interact, and learn from certified educators.</p>
+                    <ul class="service-features">
+                        <li>Live Classroom Environment</li>
+                        <li>Doubt Clearing in Real-Time</li>
+                        <li>Daily & Weekly Batches</li>
+                        <li>Class Recordings Included</li>
+                        <li>Performance Reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UI/UX Design -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">Test Preparation Programs</h2>
+            <div class="service-content">
+                <div class="service-text">
+                    <p>Crack top competitive exams with structured courses, exam strategies, mock tests, and previous year question practice.</p>
+                    <ul class="service-features">
+                        <li>JEE / NEET / GATE</li>
+                        <li>UPSC / SSC / Banking</li>
+                        <li>Mock Tests & PYQs</li>
+                        <li>Strategy Sessions</li>
+                        <li>Performance Analytics</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <div class="visual-box">Exam-Focused</div>
+                    <div class="visual-box">High Success Rate</div>
+                    <div class="visual-box">Structured Learning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Marketing -->
+    <section class="service-detail alt-bg">
+        <div class="container">
+            <h2 class="section-title">Skill Development Programs</h2>
+            <div class="service-content reverse">
+                <div class="service-visual">
+                    <div class="visual-box">Coding</div>
+                    <div class="visual-box">Design</div>
+                    <div class="visual-box">Communication</div>
+                </div>
+                <div class="service-text">
+                    <p>Build industry-ready skills with hands-on training programs covering technology, creativity, and professional development.</p>
+                    <ul class="service-features">
+                        <li>Programming & Software Skills</li>
+                        <li>Business & Communication Skills</li>
+                        <li>Creative Design Courses</li>
+                        <li>Interview & Resume Training</li>
+                        <li>Job-Oriented Curriculum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cloud Solutions -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">Student Mentorship</h2>
+            <div class="service-content">
+                <div class="service-text">
+                    <p>Get personalized guidance from expert mentors to help you choose the right career path and overcome academic challenges.</p>
+                    <ul class="service-features">
+                        <li>One-on-One Mentoring</li>
+                        <li>Academic Guidance</li>
+                        <li>Career Planning</li>
+                        <li>Goal-Based Tracking</li>
+                        <li>Parent-Student Review Sessions</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <div class="visual-box">Personalized</div>
+                    <div class="visual-box">Expert Mentors</div>
+                    <div class="visual-box">Growth-Focused</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DevOps Services -->
+    <section class="service-detail alt-bg">
+        <div class="container">
+            <h2 class="section-title">Learning Management System (LMS)</h2>
+            <div class="service-content reverse">
+                <div class="service-visual">
+                    <div class="visual-box">Assignments</div>
+                    <div class="visual-box">Reports</div>
+                    <div class="visual-box">Analytics</div>
+                </div>
+                <div class="service-text">
+                    <p>A powerful LMS designed for schools, institutions, and educators to manage classes, students, and curriculum effortlessly.</p>
+                    <ul class="service-features">
+                        <li>Course Creation Tools</li>
+                        <li>Student Activity Tracking</li>
+                        <li>Automated Reports</li>
+                        <li>Integrated Assessments</li>
+                        <li>Cloud-Enabled Storage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Machine Learning -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Learning</h2>
+            <div class="service-content">
+                <div class="service-text">
+                    <p>Adaptive learning technology that personalizes study plans, recommends lessons, and tracks student behavior for better outcomes.</p>
+                    <ul class="service-features">
+                        <li>Adaptive Learning Engine</li>
+                        <li>AI Doubt Solver</li>
+                        <li>Smart Study Planner</li>
+                        <li>Predictive Performance Analysis</li>
+                        <li>Personalized Recommendations</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <div class="visual-box">Adaptive</div>
+                    <div class="visual-box">Smart</div>
+                    <div class="visual-box">AI-Driven</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blockchain Development -->
+    <section class="service-detail alt-bg">
+        <div class="container">
+            <h2 class="section-title">Certification Programs</h2>
+            <div class="service-content reverse">
+                <div class="service-visual">
+                    <div class="visual-box">Verified</div>
+                    <div class="visual-box">Recognized</div>
+                    <div class="visual-box">Industry-Aligned</div>
+                </div>
+                <div class="service-text">
+                    <p>Earn globally recognized certificates that add value to your academic and professional journey.</p>
+                    <ul class="service-features">
+                        <li>Industry-Recognized Certificates</li>
+                        <li>Skill-Based Course Tracks</li>
+                        <li>Portfolio & Project Validation</li>
+                        <li>Digital Badges</li>
+                        <li>Placement Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QA -->
+    <section class="service-detail">
+        <div class="container">
+            <h2 class="section-title">Academic Support Services</h2>
+            <div class="service-content">
+                <div class="service-text">
+                    <p>Ensure learners receive the help they need for assignments, projects, homework, and exam preparation.</p>
+                    <ul class="service-features">
+                        <li>Homework Assistance</li>
+                        <li>Assignment Support</li>
+                        <li>Project Guidance</li>
+                        <li>Performance Review</li>
+                        <li>Study Resources</li>
+                    </ul>
+                </div>
+                <div class="service-visual">
+                    <div class="visual-box">Reliable</div>
+                    <div class="visual-box">Student-Friendly</div>
+                    <div class="visual-box">Efficient</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting -->
+    <section class="service-detail alt-bg">
+        <div class="container">
+            <h2 class="section-title">Institutional Solutions</h2>
+            <div class="service-content reverse">
+                <div class="service-visual">
+                    <div class="visual-box">School ERP</div>
+                    <div class="visual-box">E-Learning</div>
+                    <div class="visual-box">Digital Campus</div>
+                </div>
+                <div class="service-text">
+                    <p>Helping schools, colleges, and educational institutes digitize operations and enhance learning experiences.</p>
+                    <ul class="service-features">
+                        <li>Digital Classrooms</li>
+                        <li>School Management ERP</li>
+                        <li>Teacher Training</li>
+                        <li>e-Learning Infrastructure</li>
+                        <li>End-to-End Academic Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="service-process">
+        <div class="container">
+            <h2 class="section-title">How Learning Works</h2>
+            <div class="process-flow">
+                <div class="flow-step">
+                    <span class="flow-number">01</span>
+                    <h3>Enroll</h3>
+                    <p>Choose your program and get instant access.</p>
+                </div>
+                <div class="flow-step">
+                    <span class="flow-number">02</span>
+                    <h3>Learn</h3>
+                    <p>Attend classes, complete lessons & practice.</p>
+                </div>
+                <div class="flow-step">
+                    <span class="flow-number">03</span>
+                    <h3>Evaluate</h3>
+                    <p>Take tests, track progress & improve.</p>
+                </div>
+                <div class="flow-step">
+                    <span class="flow-number">04</span>
+                    <h3>Achieve</h3>
+                    <p>Earn certifications & move toward your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+        <div class="container">
+            <h2>Start Your Learning Journey Today</h2>
+            <p>Join thousands of students who trust Stackly Academy</p>
+            <a href="./contact.html" class="btn btn-primary">Get Started Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                        <span class="logo-text">Stackly Academy</span>
+                    </div>
+                    <p class="footer-desc">Empowering students through innovative learning experiences.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Programs</a></li>
+                        <li><a href="./blog.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stacklyacademy.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Learning Hub, Bengaluru, Karnataka</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly Academy. All rights reserved.</p>
+            </div>
+            <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="location-info">📍 Indiranagar, Bangalore, Karnataka 560038, India</p>
+        </div>
+    </div>
+        </div>
+
+        
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+   <!-- Navigation -->
+   <nav class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+            <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+            <span class="logo-text">Stackly</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <a class="dropdown-toggle">Home ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="./home2.html">Home 2</a></li>
+                </ul>
+            </li>
+
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./services.html">Courses</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./dashboard.html">Dashboard</a></li>
+
+            <li><a href="./login.html" class="nav-btn">Login</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Unlock Your Academic Potential</h1>
+            <p class="hero-subtitle">
+                High-quality online learning programs for school students, competitive exams, and skill development.
+            </p>
+            <div class="hero-buttons">
+                <a href="./services.html" class="btn btn-primary">Explore Courses</a>
+                <a href="./contact.html" class="btn btn-secondary">Book Free Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Stackly Education?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Expert Faculty</h3>
+                    <p>Learn from experienced educators who simplify every concept.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎥</div>
+                    <h3>Interactive Classes</h3>
+                    <p>Live engaging sessions with real-time doubt solving.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Adaptive Learning</h3>
+                    <p>Personalized study plans created based on your learning pace.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your growth with weekly tests and performance reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title">Our Learning Programs</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>K–12 Classes</h3>
+                    <p>NCERT-aligned courses for Classes 1–12 with interactive video lessons.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Exam Prep</h3>
+                    <p>Specialized coaching for JEE, NEET, Olympiads, and competitive exams.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Conceptual Videos</h3>
+                    <p>Engaging visual learning modules to strengthen fundamentals.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Skill Courses</h3>
+                    <p>Coding, robotics, Vedic maths, communication skills, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="stat-number">50,000+</h3>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">95%</h3>
+                    <p>Exam Success Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">300+</h3>
+                    <p>Expert Teachers</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="stat-number">10+</h3>
+                    <p>Years in Education</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <h2 class="section-title">Our Learning Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Assess</h3>
+                    <p>Identify the student’s level and learning needs.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Learn</h3>
+                    <p>Attend structured classes and watch concept-based videos.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Practice</h3>
+                    <p>Daily quizzes, assignments, and interactive exercises.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Improve</h3>
+                    <p>Review performance reports and receive mentor guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Students & Parents Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Stackly helped my son score 95% in his board exams. Highly recommended!"</p>
+                    <p class="testimonial-author">- Priya Sharma, Parent</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The video lessons are amazing! They make tough concepts super easy."</p>
+                    <p class="testimonial-author">- Ananya, Class 10 Student</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Their JEE coaching program is excellent. Great teachers and study material."</p>
+                    <p class="testimonial-author">- Rahul Mehta, Student</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">We Use The Best Learning Technologies</h2>
+            <div class="tech-grid">
+                <div class="tech-item">Smart AI Analytics</div>
+                <div class="tech-item">Immersive Video Learning</div>
+                <div class="tech-item">Adaptive Assessments</div>
+                <div class="tech-item">Cloud-Based LMS</div>
+                <div class="tech-item">Interactive Quizzes</div>
+                <div class="tech-item">Live Collaboration Tools</div>
+                <div class="tech-item">Gamified Learning</div>
+                <div class="tech-item">Student Progress Tracking</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section class="portfolio-preview">
+        <div class="container">
+            <h2 class="section-title">Student Success Stories</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image1"></div>
+                    <h3>Top Rank Achievers</h3>
+                    <p>JEE and NEET toppers trained with structured Stackly programs.</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image2"></div>
+                    <h3>Smart Learning Programs</h3>
+                    <p>AI-driven customized learning paths for better understanding.</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image3"></div>
+                    <h3>Interactive Learning</h3>
+                    <p>Fun, engaging classes that help students learn faster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <h2 class="section-title">Educational Categories We Cover</h2>
+            <div class="industries-grid">
+                <div class="industry-card">School Education</div>
+                <div class="industry-card">Competitive Exams</div>
+                <div class="industry-card">Skill Development</div>
+                <div class="industry-card">Coding for Kids</div>
+                <div class="industry-card">Language Learning</div>
+                <div class="industry-card">Early Childhood Learning</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Your Learning Journey Today</h2>
+            <p>Join thousands of students achieving success through smart digital learning.</p>
+            <a href="./contact.html" class="btn btn-large">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">Trusted By Leading Institutes</h2>
+            <div class="partners-grid">
+                <div class="partner-logo">EduMaster Academy</div>
+                <div class="partner-logo">BrightLearn</div>
+                <div class="partner-logo">Top Achievers Hub</div>
+                <div class="partner-logo">FutureSkills Academy</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="assets/logoimg.webp" alt="Stackly Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                        <span class="logo-text">Stackly Edu</span>
+                    </div>
+                    <p class="footer-desc">Empowering students through innovative digital learning solutions.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="./index.html" class="dropdown-toggle">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./home2.html">Home 2</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./services.html">Courses</a></li>
+                        <li><a href="./blog.html">Study Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <p>Email: support@stacklyedu.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                    <p>Address: 123 Learning Street, Bengaluru, Karnataka</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="./404.html">Facebook</a>
+                        <a href="./404.html">Twitter</a>
+                        <a href="./404.html">LinkedIn</a>
+                        <a href="./404.html">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stackly Edu. All rights reserved.</p>
+            </div>
+            <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="map-modal-close" data-map-close aria-label="Close map"></button>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.826169413119!2d77.6298!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1a1e1e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v" width="100%" height="400" style="border:0; border-radius: 1rem;" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <p class="location-info">📍 Indiranagar, Bangalore, Karnataka 560038, India</p>
+        </div>
+    </div>
+        </div>
+
+        
+
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

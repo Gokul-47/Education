@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | EduStack</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logoimg.webp" alt="EduStack Logo" class="logo-icon" style="width: 40px; height: 40px; object-fit: contain;">
+                <span class="logo-text">EduStack</span>
+            </div>
+            <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="./index.html" class="dropdown-toggle">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./home2.html">Home 2</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./services.html">Courses</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./login.html" class="nav-btn">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 404 Content -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Learning Path Not Found</h2>
+                <p class="error-text">
+                    It looks like the educational resource you're searching for has been moved,
+                    updated, or no longer exists. Let’s guide you back to your learning journey.
+                </p>
+                <div class="error-actions">
+                    <a href="./index.html" class="btn btn-primary">Back to Home</a>
+                    <a href="./contact.html" class="btn btn-secondary">Need Help?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Helpful Links -->
+    <section class="helpful-links">
+        <div class="container">
+            <h2 class="section-title">Continue Your Learning</h2>
+            <div class="links-grid">
+                <a href="./services.html" class="link-card">
+                    <h3>Browse Courses</h3>
+                    <p>Explore subjects curated by top educators</p>
+                </a>
+                <a href="./about.html" class="link-card">
+                    <h3>Our Mission</h3>
+                    <p>Learn how we empower students globally</p>
+                </a>
+                <a href="./blog.html" class="link-card">
+                    <h3>Learning Resources</h3>
+                    <p>Read tips & articles on study strategies</p>
+                </a>
+                <a href="./contact.html" class="link-card">
+                    <h3>Ask for Support</h3>
+                    <p>We're here to help you find your way</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>
