@@ -384,5 +384,41 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+function handleContactForm(event) {
+    event.preventDefault(); // Stop default behavior
+
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const company = document.getElementById("company").value.trim();
+    const service = document.getElementById("service").value.trim();
+    const budget = document.getElementById("budget").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Basic validation rules
+    if (
+        name === "" ||
+        email === "" ||
+        service === "" ||
+        message === "" ||
+        !validateEmail(email)
+    ) {
+        alert("Invalid details. Please check and try again.");
+        return;
+    }
+
+    // If everything is correct → redirect to 404.html
+    window.location.href = "404.html";
+}
+
+// Email validation function
+function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+</script>
+
 </body>
 </html>

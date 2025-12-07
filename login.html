@@ -117,8 +117,8 @@
                     <span>or</span>
                 </div>
                 <div class="social-login">
-                    <button class="social-btn" onclick="alert('Google signup coming soon!')">Sign up with Google</button>
-                    <button class="social-btn" onclick="alert('GitHub signup coming soon!')">Sign up with GitHub</button>
+                    <button class="social-btn" onclick="window.location.href='404.html'">Sign up with Google</button>
+                    <button class="social-btn" onclick="window.location.href='404.html'">Sign up with GitHub</button>
                 </div>
                 <p class="signup-link">Already enrolled? <a href="#" onclick="showLogin(event)">Login</a></p>
             </div>
@@ -212,5 +212,112 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+// ---------------- LOGIN VALIDATION ----------------
+function handleLogin(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("login-email").value.trim();
+    const password = document.getElementById("login-password").value.trim();
+    const errorBox = document.getElementById("login-error");
+
+    // Reset error
+    errorBox.style.display = "none";
+    errorBox.innerText = "";
+
+    // Validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        errorBox.innerText = "Enter a valid email.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    if (password.length < 6) {
+        errorBox.innerText = "Password must be at least 6 characters.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    // SUCCESS → redirect to 404
+    window.location.href = "404.html";
+    return true;
+}
+
+
+
+// ---------------- SIGNUP VALIDATION ----------------
+function handleSignup(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("signup-name").value.trim();
+    const email = document.getElementById("signup-email").value.trim();
+    const password = document.getElementById("signup-password").value.trim();
+    const confirm = document.getElementById("signup-confirm").value.trim();
+    const terms = document.getElementById("terms").checked;
+    const errorBox = document.getElementById("signup-error");
+
+    // Reset error
+    errorBox.style.display = "none";
+    errorBox.innerText = "";
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Validation checks
+    if (name === "") {
+        errorBox.innerText = "Full Name is required.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        errorBox.innerText = "Enter a valid email.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    if (password.length < 6) {
+        errorBox.innerText = "Password must be at least 6 characters.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    if (password !== confirm) {
+        errorBox.innerText = "Passwords do not match.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    if (!terms) {
+        errorBox.innerText = "You must agree to the Academy Policies.";
+        errorBox.style.display = "block";
+        return false;
+    }
+
+    // SUCCESS → redirect to 404
+    window.location.href = "404.html";
+    return true;
+}
+
+
+
+// ---------------- SWITCH BETWEEN LOGIN & SIGNUP ----------------
+function showSignup(event) {
+    event.preventDefault();
+    document.getElementById("signup-box").style.display = "block";
+    document.querySelector(".login-box:first-child").style.display = "none";
+}
+
+function showLogin(event) {
+    event.preventDefault();
+    document.getElementById("signup-box").style.display = "none";
+    document.querySelector(".login-box:first-child").style.display = "block";
+}
+</script>
+
+
+    
+    
 </body>
 </html>
